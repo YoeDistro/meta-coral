@@ -9,7 +9,7 @@ INHIBIT_DEFAULT_DEPS = "1"
 SRC_URI = "file://boot.txt"
 
 do_compile() {
-    mkimage -A arm -T script -C none -n "Boot script" -d "${WORKDIR}/boot.txt" boot.scr
+    mkimage -A arm -T script -C none -n "Boot script" -d "${UNPACKDIR}/boot.txt" boot.scr
 }
 
 inherit deploy nopackages
